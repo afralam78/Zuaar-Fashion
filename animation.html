@@ -1,0 +1,68 @@
+<!docktype html>
+<html>
+<head>
+	<title> Animation </title>
+	<style type="text/css">
+		.box-container{
+			width: 600px;
+			height: 600px;
+			border: 2px red solid;
+			margin: auto;
+		}
+		
+		.box{
+			width: 200px;
+			height: 200px;
+			background: red;
+			position: relative;
+			top: 00px;
+			left: 00px;
+			animation: box 5s;
+			animation-delay: 2s;
+			animation-duration: 5s;
+			/*animation-iteration-count: 10;
+			animation-fill-mode: forwards;*/
+			animation-fill-mode: both;
+			animation-direction: alternate-reverse;
+		}
+		@keyframes box{
+			0%{
+				top:0px;
+				left: 0px;
+				background: red;
+			}
+			10%{
+				top: 0px;
+				left: 200px;
+			}
+			25%{
+				top: 0px;
+				left: 400px;
+				background: yellow;
+			}
+			50%{
+				top: 400px;
+				left: 400px;
+				background: blue;
+			}
+			75%{
+				top: 400px;
+				left: 0px;
+				background: pink;
+			}
+			100%{
+				top: 0px;
+				left: 0px;
+				background-color: aqua;
+			}
+		}
+		
+	
+	</style>
+</head>
+<body>
+	<div class="box-container"> 
+		<div class="box"> </div>
+	</div>
+</body>
+</html>
